@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+  
+</head>
+<body>
+
+    <script>
+        //for (i = 1; i <= 6; i++) {
+        //    document.write("<h" + i + ">JavaScript!!</h" + i + ">");
+        //}
+      
+        var i = 1;
+        while (i <= 6) {
+           document.write("<h" + i + ">JavaScript!!</h" + i + ">");
+           i++;
+        }
+  
+  
+
+        //計算1加到1000的總和
+        //var sum = 0;
+        //for (i = 1; i <= 1000; i++) {
+        //    sum += i;  //sum = sum + i;
+
+        //}
+        //document.write(sum);
+
+
+       var j = 1, sum = 0;
+        while (j <= 100) {
+           sum += j;  //sum = sum + i;
+           j++;
+        }
+        document.write("sum = " + sum);
+        document.write("<hr>");
+
+        //就陣列的for迴圈拿來改
+        // var Rainbow = new Array("紅", "藍", "靛", "紫", "紅", "橙", "黃", "綠", "藍", "靛", "紫");
+        // var RainbowColor = new Array("Red", "Blue", "Indigo", "Violet", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet");
+
+        // for (i = 0; i < Rainbow.length; i++)
+        //     //配合CSS加上顏色 因為剛好是英文 所以全部搭得上
+        //     document.write("<span style='font-size:3rem;color:"+RainbowColor[i]+"'>"+Rainbow[i]+"</span>");
+         var Rainbow = new Array("紅", "橙", "黃", "綠", "藍", "靛", "紫");
+         var RainbowColor = new Array("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet");
+         
+       
+         var k = 0;
+
+         while(k < Rainbow.length){
+            document.write("<span style='font-size:3rem;color:"+RainbowColor[k]+"'>"+Rainbow[k]+"</span>");
+            k++;
+         }
+
+        document.write("<hr>");
+
+        //後測迴圈 1加到100的總和
+        var s = 1, sum2 = 0;
+        do {
+            sum2 += s;
+            s++;//這沒寫就=1 就完蛋 條件一直滿足跑到記憶體吃完空間
+        } 
+        while (s <= 100);
+        document.write("sum2=" + sum2);
+        document.write("<hr>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+    	var a = 10;
+    	if(a>5){
+    		a=1234;
+    		document.write(a);
+    	}
+    	// var a = 10;
+    	// if(a>5){
+    	// 	a=123;
+    	// 	doucument.write(a);
+    	// }
+      document.write("<hr>");
+        var a = 3;
+
+        //條件滿足即執行 不滿足就不執行
+        if (a > 5) {
+            a = 123;
+            document.write(a);
+        }
+
+        //二擇一條件控制
+        if(a>5){
+        	a=123;
+        	document.write(a);
+        }
+        else{
+        	a=0;
+        	document.write(a);
+        }
+        // if (a > 5) {
+        //     a = 123;
+        //     document.write(a);
+        // }//else一定搭if
+        // else {
+        //     a = 0;
+        //     document.write(a);
+        // }
+        document.write("<hr>")
+        //多條件控制
+        //1:信用卡付款, 2:現金, 3:轉帳, 4,貨到付款
+        var intPayType= 2;
+        
+        if(intPayType == 1){
+        	document.write("您選擇信用卡付款");
+        }
+         if(intPayType == 2){
+        	document.write("您選擇現金付款");
+        }
+         if(intPayType == 3){
+        	document.write("您選擇轉帳付款");
+        }
+         if(intPayType == 4){
+        	document.write("您選擇貨到付款");
+        }
+        
+        if(intPayType > 4 || intPayType < 0 || intPayType % ParseInt(intPayType) !== 0){
+        	document.write("請重新選擇付款方式");
+        }
+        // var intPayType = 4.324523;
+
+        // if (intPayType == 1) {
+        //     document.write("您選擇信用卡付款");
+        // }
+        // if (intPayType == 2) {
+        //     document.write("您選擇以現金方式支付");
+        // }
+        // if (intPayType == 3) {
+        //     document.write("您選擇以轉帳方式支付");
+        // }
+        // if (intPayType == 4) {
+        //     document.write("您選擇貨到付款");
+        // }                           
+        // if (intPayType > 4 || intPayType % parseInt(intPayType) !== 0) {
+        //     document.write("請重新選擇你的付款方式");
+        // }
+        // if (intPayType < 0) {
+        //     document.write("請重新選擇你的付款方式");
+        // }
+        //以程式碼邏輯思考 不是整數就不執行 parseInt(一定是整數) %取餘數 !==不等於 ==
+        //if (intPayType % parseInt(intPayType) !== 0) {
+        //    document.write("請重新選擇你的付款方式");
+        //}
+        //執行速度與效能 除數為0 Exception(例外) !not &&and ||or
+
+        document.write("<hr>")
+        //區分等第
+        //90分以上為優等, 80~89分為甲等, 70~79分為乙等
+        //60~69分為丙等, 未滿60分為丁等
+       //  var score=96;
+        
+       // if(score >=90 ){
+       // 	  document.write("優等");
+       // }
+       // else if(score >=80 ){
+       // 	  document.write("甲等");
+       // }
+       // else if(score >=70 ){
+       // 	  document.write("乙等");
+       // }
+       // else if(score >=60 ){
+       // 	  document.write("丙等");
+       // }
+       // else
+       // 	  document.write("丁等");
+       
+        // var score = 95;   //假設此變數一定為0~100的整數
+       
+        // if(score >= 90 && score <= 100){
+        // 	document.write("優等");
+        // }
+        // else if(score >= 80&& score <= 89){
+        // 	document.write("甲等");
+        // }
+        // else if(score >= 70 && score <= 79){
+        // 	document.write("乙等");
+        // }
+        // else if(score >= 60 && score <= 79){
+        // 	document.write("丙等");
+        // }
+        // else(score >= 0 && score <= 59){
+        // 	document.write("丁等");
+        // }
+        // var score = 96;
+        //    document.write("優等");
+        // if (score >= 80 && score <= 89)
+        //    document.write("甲等");
+        // if (score >= 70 && score <= 79)
+        //    document.write("乙等");
+        // if (score >= 60 && score <= 69)
+        //    document.write("丙等");
+        // if (score >= 0 && score <= 59)
+        //    document.write("丁等");
+
+        //if執行後就不執行else if 節省運算速度
+        
+        //if (score >= 90 && score <= 100)
+        //    document.write("優等");
+        //else if (score >= 80 && score <= 89)
+        //    document.write("甲等");
+        //else if (score >= 70 && score <= 79)
+        //    document.write("乙等");
+        //else if (score >= 60 && score <= 69)
+        //    document.write("丙等");
+        //else if (score >= 0 && score <= 59)
+        //    document.write("丁等");
+
+        //搜尋式if 時間複雜度 指數式成長 最多執行5次 平均執行次數 優先權的概念 比較運算(> < =) 邏輯運算(and or not)
+        
+        // var scores = 95;   //假設此變數一定為0~100的整數
+
+        // if (scores score >= 90 && score <= 100)
+        //     document.write("優等");
+        // else if (score >= 80 && score <= 89)
+        //     document.write("甲等");
+        // else if (score >= 70 && score <= 79)
+        //     document.write("乙等");
+        // else if (score >= 60 && score <= 69)
+        //     document.write("丙等");
+        // else 
+        //     document.write("丁等");
+
+    </script>
+
+
+
+</body>
+</html>

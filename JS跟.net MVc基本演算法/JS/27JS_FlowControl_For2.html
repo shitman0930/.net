@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+  
+</head>
+<body>
+
+    <script>
+        var Rainbow = new Array("紅", "橙", "黃", "綠", "藍", "靛", "紫");
+        document.write(Rainbow);
+        document.write("<br>");
+        var RainbowColor = new Array("Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet");
+        document.write(RainbowColor);
+
+        document.write("<hr>");
+        //index(索引值)
+        //document.write(Rainbow[0]);
+        //document.write(Rainbow[1]);
+        //document.write(Rainbow[2]);
+        //document.write(Rainbow[3]);
+        //document.write(Rainbow[4]);
+        //document.write(Rainbow[5]);
+        //document.write(Rainbow[6]);
+        //直接用迴圈叫出所有值(不會有,) 這邊就要用0了
+        for (i = 0; i < 7; i++)
+            document.write(Rainbow[i]);
+        document.write("<br>");
+        for (i = 0; i < 7; i++)
+            document.write(RainbowColor[i]);
+
+        document.write("<hr>");
+        //陣列的屬性 length可以不用寫死  
+        //document先從("<span>"+Rainbow[i]+"</span>")開始寫出來 不然會不知道在寫三小
+        
+        for (i = 0; i < Rainbow.length; i++)
+            //配合CSS加上顏色 因為剛好是英文 所以全部搭得上
+            document.write("<span style='font-size:3rem;color:"+RainbowColor[i]+"'>"+Rainbow[i]+"</span>");
+    </script>
+</body>
+</html>

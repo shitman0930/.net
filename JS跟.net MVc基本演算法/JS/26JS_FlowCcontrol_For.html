@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .header:hover {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        //for迴圈 寫10次JavaScript!!
+      
+        for (i = 0; i < 10; i++) {
+            document.write("JavaScript!!" + "<br>");
+        }
+        document.write("<hr>");
+        //for迴圈 寫1組h1到h6的JavaScript!! ""有點難懂=  =
+        for (i = 1; i <= 6; i++) {//+i+是要跑h1到h6
+            document.write("<h" +i+ ">JavaScript!!" + "</h" +i+ ">")
+        }
+        document.write("<hr>");
+        //計算1加到1000的總和
+        var sum = 0;
+        for (i = 1; i <= 1000; i++) {
+            sum += i;
+        }
+        document.write(sum);//驗算就等差數列
+        document.write("<hr>");
+
+
+        //用費式數列跑50次(從兩個1開始 下個數字是前兩數相加)
+        var s=1, m=1, r=0;
+        for(i=1; i<=50; i++){
+            document.write(s + ",");
+            r = m;
+            m += s;
+            s = r;
+        }
+        // var a = 1;
+        // var b = 1;
+        // var c = 0;//作為暫存
+        // //一定要一步一步慢慢寫 巴斯卡三角形 夾在中間就累加值
+        // for (i = 0; i < 100; i++) {
+        //     document.write(a + ",");//一定要先寫 不然會變 1 2 3而不是 1 1 2 3...
+        //     c = b;//此時c = b =      1  2 c 5 8  13 21  前面特例(1+1=2,2+1=3) 後面就放到a
+        //     b += a;//b = b+a = 1+1 = 2  5 b 8 13 21 34                     一直累加 放到c
+        //     a = c;//a = c =          1  3 a 3 5  8  13  前面特例(1+1=2,2+1=3) 後面就放到b
+
+        // }
+        //一定是產出不同的結果才會用迴圈 條件判斷與迴圈 資料型別差異性
+        document.write("<hr>");
+        //巢狀迴圈 跑50組的h1到h6的JavaScript!! 浪費空間 先註解掉好了~
+        // for(j=1; j<=50;j++){
+        // for (i = 1; i <= 6; i++) {//+i+是要跑h1到h6
+        //     document.write("<h" +i+ ">JavaScript!!" + "</h" +i+ ">")
+        //   }
+        // }
+        //for (i = 0; i < 100; i++) {//從外圈開始執行 k執行6次 i才執行1次 
+        //    for (k = 1; k <= 6; k++) {
+                  //巢狀迴圈 n*n 執行次數(時間複雜度)
+        //        //字串 裡面單引號  外面雙引號 反之亦然 不然就語法錯誤
+        //        document.write("<h" + k + " class='header'>JavaScript!!" + "</h" + k + ">")
+        //    }
+        //}
+
+        
+        //一不小心寫出99乘法表 很好~~
+        for(i=1; i<=9; i++){
+            for(j=1; j<=9; j++){
+                document.write(i+"*"+j+"="+i*j+" ");
+            }
+            document.write("<hr>");
+        }
+
+      // for(i=1;i<=9;i++){
+      //   for(j=1;j<=9;j++){
+      //       document.write(i+"*"+j+"="+i*j+" ")
+      //   }
+      //   document.write("<hr>")
+      // }
+      //畫星星 一列多一顆 要5列 相同邏輯下完成不同結果(巢狀迴圈) 缺點時間複雜度較高
+        //document.write("*<br>");
+        //document.write("**<br>");
+        //document.write("***<br>");顆數就是列數
+   
+        for (j = 1; j <= 5; j++) {
+            for (i = 1; i <= j; i++) {//顆數就是列數
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        //不用巢狀迴圈畫星星~ 
+      var s = "";
+      for(i=1; i<=5; i++){
+        s += "*";
+        document.write(s+"<br>");
+      }
+        // var e = "";
+        // //先給資料類型 不然會undefine 缺點空間複雜度較高(要填5次*) 但是時間複雜度減少很多
+        // //以空間換時間或時間換空間 端視你做的專案而定
+        // for (t = 0; t < 5; t++) {
+        //     e += "*"
+        //     document.write(e + "<br>");
+        // }
+        
+    </script>
+
+</body>
+</html>

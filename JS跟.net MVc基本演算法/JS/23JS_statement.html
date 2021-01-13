@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+
+    <script>
+        var a = 10;
+        a = 20;//指定運算, a=20
+        a = a + 10; //指定運算, a=30
+        a += 10; //指定運算 , a=40
+        a -= 8; //指定運算, a=40-8=32
+        a *= 10; //32*10=320
+        a /= 32; //320/32=10
+
+        a++; //a=a+1, a+=1, a+1 就11阿
+        document.write(a + "<br>");
+
+        //把c跟d調換啦
+        var c = 54545, d = 8765
+        b = c;//就代數啦 演算法(一段能完成需求的程式, 數學上的公式)
+        c = d;
+        d = b;
+        //1.了解需求 
+        //2.想出自己的邏輯(想出來才能第三步! 就訓練導公式) 
+        //3.把邏輯用程式碼表達, 解決問題
+
+
+
+        document.write("c=" + c + ", d=" + d + "<br>");
+        //把ab調換不准用變數(就兩數互換啦) 算術運算 後面會有費式數列的應用
+        var a = 123, b = 456;
+        a = a + b;//a = 123 + 456 = 579
+        b = a - b;//b = 579 - 456 = 123
+        a = a - b;//a = 579 - 123 = 456
+
+
+        //a = 456;就都初始化(也算變數??)
+        //b = 123;
+        
+        document.write("a=" + a + ", b=" + b + "<br>");
+        //失去精準度 溢位
+        var f = 23154565634723423, g = 452352345345234234;
+        f = f + g;
+        g = f - g;
+        f = f - g;
+
+        document.write("f=" + f + ", g=" + g + "<br>");
+        //不會溢位的位元運算
+        var h = 100, i = 80
+        h = h ^ i;
+        i = h ^ i;
+        h = h ^ i;
+
+        document.write("h=" + h + ", i=" + i);
+        
+        document.write("<hr>");
+        var x = 4, y = 10;
+         document.write(x % y);
+        
+        document.write("<br>");
+
+        //匈牙利命名法 可知道資料型別 隱含轉換? 
+        //型別的重要性 程式語言間的不同 true是1 所以是124
+        var strName = "Jack", intNumber = 123, blnGender = true;
+        var result;
+
+        result = strName + blnGender;
+        document.write(result + "<br>");
+        document.write(typeof (result) + "<br>");
+
+        result = strName + intNumber;
+        document.write(result + "<br>");
+        document.write(typeof (result) + "<br>");
+
+        result = intNumber + blnGender;
+        document.write(result + "<br>");
+        document.write(typeof (result) + "<br>");
+
+        result = intNumber + strName;
+        document.write(result + "<br>");
+        document.write(typeof (result) + "<br>");
+
+
+        result = blnGender + strName;
+        document.write(result + "<br>");
+        document.write(typeof (result) + "<br>");
+
+        result = blnGender + intNumber;
+        document.write(result + "<br>");
+        document.write(typeof (result) + "<br>");
+
+        //型別不知道有時JS自己就幫你轉 強制轉換 123可以數字改文字 bolean可以當數字 所以也能當字串
+        //
+        //無條件捨去
+        document.write(parseInt(3.2) + "<br>");
+        document.write(parseInt(3.9999999) + "<br>");
+        document.write(parseInt("3.2") + "<br>");
+        //NaN not a number
+        document.write(parseInt("aasd") + "<br>");
+        //也捨去文字
+        document.write(parseInt("3gegwqgqw") + "<br>");
+        document.write(parseInt("afasfas333") + "<br>");
+        //也捨去文字
+        document.write(parseInt("3 page") + "<br>");
+        //就16 8 10進制
+        document.write(parseInt("18ff", 16) + "<br>");
+        document.write(parseInt("157", 8) + "<br>");
+        document.write(parseInt("18ff", 10) + "<br>");
+        //就浮點數
+        document.write(parseFloat("3.2") + "<br>")
+        document.write(parseFloat("aaaa3.2") + "<br>");
+
+        var strName = "Jack";
+        //宣告圓周率 這就不會變 不變的值不適合放進變數 可以用const(常數)
+        const PI = 3.1415926;
+        //半徑有時會變
+        var r = 5
+     
+        
+
+
+    </script>
+
+</body>
+</html>
